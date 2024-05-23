@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.empresa.hito_angelgallegofelipe.HelloController">
+    <children>
+        <VBox layoutX="50.0" layoutY="20.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <Label text="Frutería" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <TextField fx:id="searchTextField" promptText="Buscar..." style="-fx-padding: 10px; -fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+                <TableView fx:id="frutasTable" prefHeight="200.0" prefWidth="500.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-selection-bar: #3498db; -fx-selection-bar-non-focused: #95a5a6;">
+                    <columns>
+                        <TableColumn text="Nombre" fx:id="nombreColumn" style="-fx-alignment: CENTER;"/>
+                        <TableColumn text="Precio" fx:id="precioColumn" style="-fx-alignment: CENTER;"/>
+                        <TableColumn text="Peso por Unidad" fx:id="pesoColumn" style="-fx-alignment: CENTER;"/>
+                    </columns>
+                </TableView>
+                <VBox spacing="15" style="-fx-background-color: #ecf0f1; -fx-padding: 10px; -fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+                    <children>
+                        <Label text="Nombre:"/>
+                        <TextField fx:id="nombreTextField" style="-fx-padding: 10px; -fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+                        <Label text="Precio:"/>
+                        <TextField fx:id="precioTextField" style="-fx-padding: 10px; -fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+                        <Label text="Peso por Unidad (kg):"/>
+                        <TextField fx:id="pesoPorUnidadTextField" style="-fx-padding: 10px; -fx-border-color: #bdc3c7; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+                        <HBox spacing="20">
+                            <children>
+                                <Button text="Crear Fruta" onAction="#handleCreate" style="-fx-min-width: 120px; -fx-min-height: 40px; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-background-color: #3498db; -fx-text-fill: white;"/>
+                                <Button text="Actualizar Fruta" onAction="#handleUpdate" style="-fx-min-width: 120px; -fx-min-height: 40px; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+                                <Button text="Eliminar Fruta" onAction="#handleDelete" style="-fx-min-width: 120px; -fx-min-height: 40px; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-background-color: #95a5a6; -fx-text-fill: white;"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Label fx:id="welcomeText" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
